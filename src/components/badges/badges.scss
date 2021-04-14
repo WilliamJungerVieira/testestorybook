@@ -1,0 +1,284 @@
+@import "../../styles/scss/tokens.scss";
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+
+.badge {
+	display: inline-block;
+	border-radius: $border-radius-pill;
+	padding: $spacing-squish-xs;
+	margin: $spacing-inline-2xs;
+	font-size: $font-size-2xs;
+	font-family: $font-family-secondary, sans-serif;
+	line-height: $line-height-xs;
+	border: $border-thickness-sm solid $color-neutral-light-20;
+	margin-top: 5px;
+	vertical-align: middle;
+	font-weight: normal;
+	outline: none;
+}
+
+.icon {
+	color: $color-neutral-dark-35;
+	margin-right: 5px;
+	font-size: 12px;
+}
+
+.badge--default {
+	background-color: $color-neutral-light-20;
+	border: $border-thickness-sm solid $color-neutral-light-20;
+	color: $color-neutral-dark-50;
+}
+
+.badge--default:hover {
+	background-color: $color-neutral-lightest;
+	border: $border-thickness-sm solid $color-neutral-light-10;
+	cursor: pointer;
+}
+
+.badge--default:focus {
+	background-color: $color-neutral-light-20;
+	border:2px solid $color-neutral-light-10;
+	outline: none;
+}
+
+.badge--default:active {
+	background-color: $color-neutral-light-10;
+	border: $border-thickness-sm solid $color-neutral-light-20;
+}
+
+.badge--default--disabled{
+	background-color: $color-neutral-light-20;
+	border: $border-thickness-sm solid $color-neutral-light-20;
+	color: $color-neutral-dark-35;
+	cursor: not-allowed;
+}
+
+.icon--default--disabled {
+	color: $color-neutral-base;
+	cursor: not-allowed;
+}
+
+.badge--danger {
+	background-color: $color-red-light-35;
+	color: $color-red-dark-20;
+	border: 1px solid  $color-red-light-35;
+}
+
+.badge--danger:hover {
+	background-color:$color-neutral-lightest;
+	border: 1px solid $color-red-light-20;
+	cursor: pointer;
+}
+
+.badge--danger:focus {
+	background-color:  $color-red-light-35;
+	border: 2px solid $color-red-light-20;
+	outline: none;
+}
+
+.badge--danger:active  {
+	background-color:  $color-red-light-20;
+	border: $border-thickness-sm solid $color-red-light-35;
+}
+
+.badge--danger--disabled {
+	background-color:  $color-red-light-35;
+	border: $border-thickness-sm solid $color-red-light-35;
+	color: $color-red-base;
+	cursor: not-allowed;
+}
+
+.icon--danger {
+	color: $color-red-base;
+}
+
+.icon--danger--disabled {
+	color: $color-red-light-20;
+	cursor: not-allowed;
+}
+
+
+.badge--success {
+	background-color: $color-green-light-55;
+	color: $color-green-dark-15;
+	border: $border-thickness-sm solid color-green-light-55;
+}
+
+.badge--success:hover {
+	background-color: $color-neutral-lightest;
+	border: $border-thickness-sm solid $color-green-light-40;
+	cursor: pointer;
+}
+
+.badge--success:focus {
+	background-color: $color-neutral-light-25;
+	color: $color-green-dark-15;
+	border: 2px solid $color-green-light-20;
+	outline: none;
+}
+
+.badge--success:active {
+	background-color: $color-green-light-40;
+	color: $color-green-dark-15;
+	border: $border-thickness-sm solid $color-green-light-55;
+}
+
+.badge--success--disabled {
+	background-color: $color-green-light-55;
+	color: $color-green-base;
+	border: $border-thickness-sm solid $color-green-light-55;
+	cursor: not-allowed;
+}
+
+.icon--success {
+	color: $color-green-base;
+}
+
+.icon--success--disabled {
+	color: $color-green-light-20;
+	cursor: not-allowed;
+}
+
+
+
+
+
+.badge--new {
+	background-color: $color-purple-light-55;
+	color: $color-purple-base;
+	border: $border-thickness-sm solid $color-purple-light-55;
+}
+
+.badge--new:hover {
+	background-color: $color-neutral-lightest;
+	color: $color-purple-base;
+	border: $border-thickness-sm solid $color-purple-light-40;
+	cursor: pointer;
+}
+
+.badge--new:focus {
+	background-color: $color-purple-light-55;
+	color: $color-purple-base;
+	border: 2px solid $color-purple-light-40;
+	outline: none;
+}
+
+.badge--new:active  {
+	background-color: $color-purple-light-40;
+	color: $color-purple-base;
+	border: $border-thickness-sm solid $color-purple-light-55;
+}
+
+.badge--new--disabled {
+	background-color: $color-purple-light-55;
+	color: $color-purple-light-20;
+	border: $border-thickness-sm solid $color-purple-light-55;
+	cursor: not-allowed;
+}
+
+.icon--new {
+	color: $color-purple-light-20;
+}
+
+.icon--new--disabled {
+	color: $color-purple-light-40;
+	cursor: not-allowed;
+}
+
+
+
+.badge--warning {
+	background-color: $color-yellow-light-35;
+	color: $color-orange-dark-15;
+	border: $border-thickness-sm solid $color-yellow-light-35;
+}
+
+.badge--warning:hover {
+	background-color: $color-neutral-lightest;
+	color: $color-orange-dark-15;
+	border: $border-thickness-sm solid $color-yellow-light-20;
+	cursor: pointer;
+}
+
+.badge--warning:focus {
+	background-color: $color-yellow-light-35;
+	color: $color-orange-dark-15;
+	border: 2px solid $color-yellow-light-20;
+	outline: none;
+}
+
+.badge--warning:active  {
+	background-color: $color-yellow-light-20;
+	color: $color-orange-dark-15;
+	border: $border-thickness-sm solid $color-yellow-light-35;
+}
+
+.badge--warning--disabled {
+	background-color: $color-yellow-light-35;
+	color: $color-orange-base;
+	border: $border-thickness-sm solid $color-yellow-light-35;
+	cursor: not-allowed;
+}
+
+.icon--warning {
+	color: $color-orange-base;
+}
+
+.icon--warning--disabled {
+	color: $color-orange-light-30;
+	cursor: not-allowed;
+}
+
+
+.btn {
+	outline: none;
+	background-color: transparent;
+	border: none;
+	font-weight: 900;
+	cursor: pointer;
+	font-size: $font-size-3xs;
+}
+
+.btn--default {
+	color: $color-neutral-dark-35;
+}
+
+.btn--success {
+	color: $color-green-base;
+}
+
+.btn--new {
+	color: $color-purple-light-20;
+}
+
+.btn--danger {
+	color: $color-red-base;
+}
+
+.btn--warning {
+	color: $color-orange-base;
+}
+
+.btn--default--disabled {
+	color: $color-neutral-base;
+	cursor: not-allowed;
+}
+
+.btn--success--disabled {
+	color: $color-green-light-40;
+	cursor: not-allowed;
+}
+
+.btn--new--disabled {
+	color: $color-purple-light-40;
+	cursor: not-allowed;
+}
+
+.btn--danger--disabled {
+	color: $color-red-light-20;
+	cursor: not-allowed;
+}
+
+.btn--warning--disabled {
+	color: $color-orange-light-30;
+	cursor: not-allowed;
+}

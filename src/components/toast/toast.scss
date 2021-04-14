@@ -1,0 +1,200 @@
+@import "../../styles/scss/tokens.scss";
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+
+.notification__container {
+	font-size: $font-size-2xs;
+	box-sizing: border-box;
+	position: fixed;
+	z-index: 999999;
+}
+
+.notification--toaster {
+	background: $color-neutral-lightest;
+	transition: 0.3s ease;
+	position: relative;
+	pointer-events: auto;
+	overflow: hidden;
+	margin: 0 0 6px;
+	padding: $spacing-squish-lg;
+	margin-bottom: 15px;
+	height: 100%;
+	width: $shapes-width-3xl;
+	max-height: $shapes-height-xl;
+	min-height: $shapes-height-lg;
+	max-height: 100px;
+	border-radius: $border-radius-sm;
+	box-shadow: $shadow-elevation-5;
+	border: $color-neutral-light-10 solid $border-thickness-sm;
+}
+
+.notification--flat {
+	background: $color-neutral-lightest;
+	transition: 0.3s ease;
+	position: relative;
+	pointer-events: auto;
+	overflow: hidden;
+	margin: 0 0 6px;
+	padding: $spacing-squish-lg;
+	margin-bottom: 15px;
+	height: 100%;
+	width: $shapes-width-3xl;
+	max-height: $shapes-height-xl;
+	min-height: $shapes-height-lg;
+	max-height: 100px;
+	border-radius: $border-radius-sm;
+	border: $color-neutral-light-10 solid $border-thickness-sm;
+}
+
+.default {
+	background: $color-neutral-lightest;
+}
+
+.highlight {
+	background: $color-neutral-light-25;
+}
+
+.notification__title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: $font-size-xs;
+}
+
+.notification__message {
+	font-size: $font-size-2xs;
+	font-family: $font-family-secondary, sans-serif;
+	color: $color-neutral-dark-40;
+	line-height: $line-height-2xs;
+	margin: 0;
+	margin-top: 10px;
+}
+
+.notification__title h3 {
+	margin: 0;
+	font-size: $font-size-xs;
+	font-family: $font-family-primary, sans-serif;
+	font-weight: normal;
+}
+
+.notification__title button {
+	background-color: transparent;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	color: $color-neutral-dark-35;
+	font-size: $font-size-2xs;
+}
+
+.notification__title--default {
+	color: $color-neutral-darkest;
+}
+
+.notification__title--default:before {
+	content: "";
+	width: 8px;
+	height: 24px;
+	background-color: $color-neutral-dark-50;
+	position: absolute;
+	left: 0;
+}
+
+.notification__title--success {
+	color: $color-green-dark-15;
+}
+
+.notification__title--success:before {
+	content: "";
+	width: 8px;
+	height: 24px;
+	background-color: $color-green-base;
+	position: absolute;
+	left: 0;
+}
+
+.notification__title--danger {
+	color: $color-red-dark-20;
+}
+
+.notification__title--danger:before {
+	content: "";
+	width: 8px;
+	height: 24px;
+	background-color: $color-red-base;
+	position: absolute;
+	left: 0;
+}
+
+.notification__title--info {
+	color: $color-brand-primary-dark-15;
+}
+
+.notification__title--info:before {
+	content: "";
+	width: 8px;
+	height: 24px;
+	background-color: $color-brand-primary-base;
+	position: absolute;
+	left: 0;
+}
+
+.notification__title--warning {
+	color: $color-orange-dark-15;
+}
+
+.notification__title--warning:before {
+	content: "";
+	width: 8px;
+	height: 24px;
+	background-color: $color-orange-base;
+	position: absolute;
+	left: 0;
+}
+
+// POSITIONS
+.top-right {
+	top: 12px;
+	right: 12px;
+	transition: transform 0.6s ease-in-out;
+	animation: toast-in-right 0.7s;
+}
+
+.bottom-right {
+	bottom: 12px;
+	right: 12px;
+	transition: transform 0.6s ease-in-out;
+	animation: toast-in-right 0.7s;
+}
+
+.top-left {
+	top: 12px;
+	left: 12px;
+	transition: transform 0.6s ease-in;
+	animation: toast-in-left 0.7s;
+}
+
+.bottom-left {
+	bottom: 12px;
+	left: 12px;
+	transition: transform 0.6s ease-in;
+	animation: toast-in-left 0.7s;
+}
+
+// ANIMAÇÕES
+@keyframes toast-in-right {
+	from {
+		transform: translateX(100%);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
+@keyframes toast-in-left {
+	from {
+		transform: translateX(-100%);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
