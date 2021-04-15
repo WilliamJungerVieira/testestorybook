@@ -5,7 +5,7 @@ import "./App.css";
 import Toast from "./components/toast/toast";
 import Button from "./components/button/button";
 import Badges from "./components/badges/badges";
-import { InputGroupHorizontal, InputGroupVertical, MyCheckbox, InputSelect } from "./components/inputs/inputs";
+import { InputGroupHorizontal, InputGroupVertical, MyCheckbox, InputSelect, InputGroup } from "./components/inputs/inputs";
 
 const BUTTON_PROPS = [
 	{
@@ -225,15 +225,27 @@ const App = () => {
 
 			<Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={onSubmit}>
 				<Form>
-					<InputGroupHorizontal label="First Name" name="firstName" type="text" placeholder="Placeholder" size="sm" />
-					{/* <InputGroupHorizontal label="Last Name" name="lastName" type="text" placeholder="Placeholder" size="sm" /> */}
-					{/* <InputGroupHorizontal label="Email" name="email" type="email" placeholder="Placeholder" size="sm" /> */}
+					<InputGroup
+						label="TESTE FORMGROUP"
+						name="textdalabel"
+						placeholder="placeholder da label"
+						type="select"
+						direction="horizontal"
+						icon="false"
+						data={[
+							{ text: "label1", value: "value1" },
+							{ text: "label2", value: "value2" },
+						]}
+					/>
+					{/* <InputGroupHorizontal label="First Name" name="firstName" type="text" placeholder="Placeholder" size="sm" />
+					<InputGroupHorizontal label="Last Name" name="lastName" type="text" placeholder="Placeholder" size="sm" />
+					<InputGroupHorizontal label="Email" name="email" type="email" placeholder="Placeholder" size="sm" />
 					<InputGroupVertical label="Email" name="email" type="email" placeholder="Placeholder" size="sm" />
 					<InputGroupVertical label="Last Name teste" name="lastName" type="text" placeholder="Placeholder" size="sm" />
 
 					<InputSelect label="Job Type" name="jobType" values={["Select a job type", "designer", "development", "product", "other"]} />
 
-					<MyCheckbox name="acceptedTerms">I accept the terms and conditions</MyCheckbox>
+					<MyCheckbox name="acceptedTerms">I accept the terms and conditions</MyCheckbox> */}
 
 					<button type="submit">Submit</button>
 				</Form>
